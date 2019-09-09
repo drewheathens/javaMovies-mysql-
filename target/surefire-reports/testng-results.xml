@@ -2,37 +2,37 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="219512" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:40:55 EAT">
+  <suite name="Surefire suite" duration-ms="203722" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:14:47 EAT">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="219512" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:40:55 EAT">
+    <test name="Surefire test" duration-ms="203722" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:14:47 EAT">
       <class name="DBTest">
-        <test-method status="PASS" signature="testMysql()" name="testMysql" duration-ms="6" started-at="2019-09-09T10:40:55 EAT" finished-at="2019-09-09T10:40:55 EAT">
+        <test-method status="PASS" signature="testMysql()" name="testMysql" duration-ms="5" started-at="2019-09-09T15:14:47 EAT" finished-at="2019-09-09T15:14:47 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMysql -->
       </class> <!-- DBTest -->
       <class name="greatTest">
-        <test-method status="PASS" signature="testCreateTables()" name="testCreateTables" duration-ms="1628" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:37:17 EAT">
+        <test-method status="PASS" signature="testCreateTables()" name="testCreateTables" duration-ms="3408" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:11:27 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateTables -->
-        <test-method status="PASS" signature="testInsertMoviesGenres()" name="testInsertMoviesGenres" duration-ms="6307" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:37:22 EAT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInsertMoviesGenres -->
-        <test-method status="PASS" signature="testUrl()" name="testUrl" duration-ms="3789" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:37:19 EAT">
+        <test-method status="PASS" signature="testUrl()" name="testUrl" duration-ms="5845" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:11:30 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUrl -->
-        <test-method status="PASS" signature="testInsertGenres()" name="testInsertGenres" duration-ms="218672" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:40:54 EAT">
+        <test-method status="PASS" signature="testInsertMoviesGenres()" name="testInsertMoviesGenres" duration-ms="8049" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:11:32 EAT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInsertGenres -->
-        <test-method status="PASS" signature="testInsertMovies()" name="testInsertMovies" duration-ms="219351" started-at="2019-09-09T10:37:15 EAT" finished-at="2019-09-09T10:40:55 EAT">
+        </test-method> <!-- testInsertMoviesGenres -->
+        <test-method status="PASS" signature="testInsertMovies()" name="testInsertMovies" duration-ms="203490" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:14:47 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInsertMovies -->
+        <test-method status="PASS" signature="testInsertGenres()" name="testInsertGenres" duration-ms="202695" started-at="2019-09-09T15:11:24 EAT" finished-at="2019-09-09T15:14:47 EAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInsertGenres -->
       </class> <!-- greatTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->

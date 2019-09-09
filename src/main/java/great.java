@@ -22,7 +22,7 @@ import org.json.JSONObject;
  * @author evans
  */
 public class great {
-    
+
     public static JSONArray Url() {
         try {
             String urlString = "https://beep2.cellulant.com:9001/assessment/";
@@ -34,7 +34,7 @@ public class great {
             // write the output to stdout
             String line = reader.readLine(); // json array of records
             reader.close();
-            
+
             JSONArray jsonArray = new JSONArray(line);
             System.out.println("Converted object = " + jsonArray); //Outputting the result
             System.out.println("..........................................");
@@ -111,9 +111,9 @@ public class great {
 
                 int item = ps.executeUpdate();// movies table
                 if (item > 0) {
-                    System.out.println("Item inserted >> " + item);
+                    System.out.println("Movie inserted >> " + item);
                 } else {
-                    System.out.println("Item already exists!!"
+                    System.out.println("Movie already exists!!"
                             + "  >> " + item);
                 }
             } catch (SQLException ex) {
@@ -132,7 +132,7 @@ public class great {
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObject = jsonArray.getJSONObject(i);
-             
+
                 String[] split = jsonObject.getString("genre").split("\\|"); // escape metacharacter
 
                 // advanced for loop
@@ -201,15 +201,7 @@ public class great {
         } catch (SQLException ex) {
             Logger.getLogger(great.class.getName()).log(Level.SEVERE, null, ex);
         }
+
+        //String count = "SELECT Genre, COUNT(movieid) AS No_of_movies FROM moviesgenres left join  Genre on  Genre.genreid = moviesgenres.genreid GROUP BY Genre"; // query getting number of movies per genre       
     }
-
-
-
-    public static void countGenre() {
-
-        String count = "SELECT Genre, COUNT(movieid) AS No_of_movies FROM moviesgenres left join  Genre on  Genre.genreid = moviesgenres.genreid GROUP BY Genre"; // query getting number of movies per genre       
-
-    }
-    
 }
-

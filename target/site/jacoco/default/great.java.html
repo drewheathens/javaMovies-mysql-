@@ -22,7 +22,7 @@ import org.json.JSONObject;
  * @author evans
  */
 <span class="nc" id="L24">public class great {</span>
-    
+
     public static JSONArray Url() {
         try {
 <span class="fc" id="L28">            String urlString = &quot;https://beep2.cellulant.com:9001/assessment/&quot;;</span>
@@ -34,7 +34,7 @@ import org.json.JSONObject;
             // write the output to stdout
 <span class="fc" id="L35">            String line = reader.readLine(); // json array of records</span>
 <span class="fc" id="L36">            reader.close();</span>
-            
+
 <span class="fc" id="L38">            JSONArray jsonArray = new JSONArray(line);</span>
 <span class="fc" id="L39">            System.out.println(&quot;Converted object = &quot; + jsonArray); //Outputting the result</span>
 <span class="fc" id="L40">            System.out.println(&quot;..........................................&quot;);</span>
@@ -132,7 +132,7 @@ import org.json.JSONObject;
 
 <span class="fc bfc" id="L133" title="All 2 branches covered.">            for (int i = 0; i &lt; jsonArray.length(); i++) {</span>
 <span class="fc" id="L134">                JSONObject jsonObject = jsonArray.getJSONObject(i);</span>
-             
+
 <span class="fc" id="L136">                String[] split = jsonObject.getString(&quot;genre&quot;).split(&quot;\\|&quot;); // escape metacharacter</span>
 
                 // advanced for loop
@@ -201,16 +201,8 @@ import org.json.JSONObject;
 <span class="nc" id="L201">        } catch (SQLException ex) {</span>
 <span class="nc" id="L202">            Logger.getLogger(great.class.getName()).log(Level.SEVERE, null, ex);</span>
 <span class="fc" id="L203">        }</span>
-<span class="fc" id="L204">    }</span>
 
-
-
-    public static void countGenre() {
-
-<span class="nc" id="L210">        String count = &quot;SELECT Genre, COUNT(movieid) AS No_of_movies FROM moviesgenres left join  Genre on  Genre.genreid = moviesgenres.genreid GROUP BY Genre&quot;; // query getting number of movies per genre       </span>
-
-<span class="nc" id="L212">    }</span>
-    
+        //String count = &quot;SELECT Genre, COUNT(movieid) AS No_of_movies FROM moviesgenres left join  Genre on  Genre.genreid = moviesgenres.genreid GROUP BY Genre&quot;; // query getting number of movies per genre       
+<span class="fc" id="L206">    }</span>
 }
-
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>

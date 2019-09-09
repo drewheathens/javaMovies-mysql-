@@ -20,7 +20,7 @@ internet access to get the JSONArray.
 ## Installation 
 
 - install mysql 
-- create database Moviedb with password.
+- create database Moviedb.
 * set your connections in DB.mysql() as "connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/yourDBname", "USERNAME", "DBPASSWORD");"
 -Run DB from file DB.java as main class.
 

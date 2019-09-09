@@ -24,7 +24,7 @@ internet access to get the JSONArray.
 
 * set your connections in DB.mysql() as "connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/yourDBname", "USERNAME", "DBPASSWORD");"
 
--Run DB from file DB.java as main class.
+- Run DB from file DB.java as main class.
 
 
 

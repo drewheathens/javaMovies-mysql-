@@ -29,6 +29,7 @@ public class DB {
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Connection failure.");
+            return con;
 
         }
         return con;

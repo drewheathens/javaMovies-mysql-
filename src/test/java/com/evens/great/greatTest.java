@@ -5,7 +5,6 @@ package com.evens.great;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import java.sql.Connection;
 import org.json.JSONArray;
 import org.junit.After;
@@ -21,23 +20,23 @@ import org.testng.Assert;
  * @author evans
  */
 public class greatTest {
+
     private static Connection con = DB.mysql();
-    
-    
+
     @BeforeClass
     public static void setUpClass() {
 
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
 
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -48,17 +47,14 @@ public class greatTest {
     @Test
     public void testCreateTables() {
         System.out.println("createTables");
-        Connection con = null;
-        assertFalse(con != null);
-
+        assertNotNull(con);
+        assertEquals(great.createTables(con), 0);
 
     }
 
     /**
      * Test of Url method, of class great.
      */
-  
-    
     @Test
     public void testUrl() {
         System.out.println("Url");
@@ -92,9 +88,8 @@ public class greatTest {
         System.out.println("insertGenres");
         JSONArray jsonArray = great.Url();
         assertNotNull(con);
-        assertNotNull(jsonArray);        
+        assertNotNull(jsonArray);
         assertEquals(great.insertGenres(con, jsonArray), 0);
-
 
     }
 
@@ -112,7 +107,6 @@ public class greatTest {
 
         assertEquals(great.insertMoviesGenres(con, jay), 0);
 
-
     }
-    
+
 }

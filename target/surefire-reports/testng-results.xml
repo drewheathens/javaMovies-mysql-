@@ -2,34 +2,34 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="8555" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:28 EAT">
+  <suite name="Surefire suite" duration-ms="7444" started-at="2019-09-12T13:09:08 EAT" finished-at="2019-09-12T13:09:16 EAT">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="8555" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:28 EAT">
+    <test name="Surefire test" duration-ms="7444" started-at="2019-09-12T13:09:08 EAT" finished-at="2019-09-12T13:09:16 EAT">
       <class name="com.evens.great.DBTest">
-        <test-method status="PASS" signature="testMysql()" name="testMysql" duration-ms="282" started-at="2019-09-12T11:55:27 EAT" finished-at="2019-09-12T11:55:28 EAT">
+        <test-method status="PASS" signature="testMysql()" name="testMysql" duration-ms="89" started-at="2019-09-12T13:09:16 EAT" finished-at="2019-09-12T13:09:16 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMysql -->
       </class> <!-- com.evens.great.DBTest -->
       <class name="com.evens.great.greatTest">
-        <test-method status="PASS" signature="testCreateTables()" name="testCreateTables" duration-ms="1181" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:20 EAT">
+        <test-method status="PASS" signature="testCreateTables()" name="testCreateTables" duration-ms="1432" started-at="2019-09-12T13:09:08 EAT" finished-at="2019-09-12T13:09:10 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateTables -->
-        <test-method status="PASS" signature="testUrl()" name="testUrl" duration-ms="5163" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:24 EAT">
+        <test-method status="PASS" signature="testUrl()" name="testUrl" duration-ms="4142" started-at="2019-09-12T13:09:09 EAT" finished-at="2019-09-12T13:09:13 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUrl -->
-        <test-method status="PASS" signature="testInsertMoviesGenres()" name="testInsertMoviesGenres" duration-ms="6524" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:26 EAT">
+        <test-method status="PASS" signature="testInsertMoviesGenres()" name="testInsertMoviesGenres" duration-ms="4896" started-at="2019-09-12T13:09:09 EAT" finished-at="2019-09-12T13:09:13 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInsertMoviesGenres -->
-        <test-method status="PASS" signature="testInsertGenres()" name="testInsertGenres" duration-ms="7362" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:27 EAT">
+        <test-method status="PASS" signature="testInsertGenres()" name="testInsertGenres" duration-ms="6359" started-at="2019-09-12T13:09:09 EAT" finished-at="2019-09-12T13:09:15 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInsertGenres -->
-        <test-method status="PASS" signature="testInsertMovies()" name="testInsertMovies" duration-ms="8061" started-at="2019-09-12T11:55:19 EAT" finished-at="2019-09-12T11:55:27 EAT">
+        <test-method status="PASS" signature="testInsertMovies()" name="testInsertMovies" duration-ms="7182" started-at="2019-09-12T13:09:09 EAT" finished-at="2019-09-12T13:09:16 EAT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInsertMovies -->

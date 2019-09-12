@@ -8,6 +8,7 @@ package com.evens.great;
 
 import com.evens.great.DB;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -49,6 +50,8 @@ public class DBTest {
         Connection expResult = null;
         Connection result = DB.mysql();
         assertTrue(result != expResult);
+
+
 
     }
 

@@ -25,19 +25,25 @@ import org.json.JSONObject;
  */
 public class great {
 
-    public static void createTables(Connection con) {
-
-        String genre = "create table IF NOT EXISTS Genre(genreID INT AUTO_INCREMENT primary key NOT NULL, genre VARCHAR(50) unique not null)";
-        String movies = "create table IF NOT EXISTS movies(movieID INT primary key NOT NULL , title VARCHAR(100) NOT NULL)";
-        String moviesgenres = "create table IF NOT EXISTS moviesgenres(movieID int not null,genreID int NOT NULL,primary key(genreid, movieid), FOREIGN KEY (genreID) REFERENCES Genre(genreID), FOREIGN KEY (movieID) REFERENCES movies(movieID))";
+    public static int createTables(Connection con) {
+        ResultSet rs;
+        int key = 0;
 
         try {
-            PreparedStatement ps = con.prepareStatement(genre);
-            PreparedStatement ps1 = con.prepareStatement(movies);
-            PreparedStatement ps2 = con.prepareStatement(moviesgenres);
+            String genre = "create table IF NOT EXISTS Genre(genreID INT AUTO_INCREMENT primary key NOT NULL, genre VARCHAR(50) unique not null)";
+            String movies = "create table IF NOT EXISTS movies(movieID INT primary key NOT NULL , title VARCHAR(100) NOT NULL)";
+            String moviesgenres = "create table IF NOT EXISTS moviesgenres(movieID int not null,genreID int NOT NULL,primary key(genreid, movieid), FOREIGN KEY (genreID) REFERENCES Genre(genreID), FOREIGN KEY (movieID) REFERENCES movies(movieID))";
+
+            PreparedStatement ps = con.prepareStatement(genre, PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps1 = con.prepareStatement(movies, PreparedStatement.RETURN_GENERATED_KEYS);
+            PreparedStatement ps2 = con.prepareStatement(moviesgenres, PreparedStatement.RETURN_GENERATED_KEYS);
 
             int item = ps.executeUpdate();
-            System.out.println("created table genre >> " + item);
+            if (item > 0) {
+                System.out.println("created table genre >> " + item);
+            } else {
+                System.out.println("table genre already exists !! >> " + item);
+            }
 
             int item1 = ps1.executeUpdate();
             if (item > 0) {
@@ -51,13 +57,40 @@ public class great {
                 System.out.println("created table moviesgenres >> " + item2);
             } else {
                 System.out.println("table moviesgenres already exists!! >> " + item2);
+            }
 
+            rs = ps.getGeneratedKeys();
+            key = rs.next() ? rs.getInt(1) : 0;
+
+            if (key != 0) {
+                System.out.println("Generated MovieTable key = " + key);
+            } else {
+                System.out.println("MovieTable key not generated = " + key);
+            }
+
+            rs = ps1.getGeneratedKeys();
+            key = rs.next() ? rs.getInt(1) : 0;
+
+            if (key != 0) {
+                System.out.println("Generated GenreTable key = " + key);
+            } else {
+                System.out.println("GenreTable key not generated = " + key);
+            }
+
+            rs = ps2.getGeneratedKeys();
+            key = rs.next() ? rs.getInt(1) : 0;
+
+            if (key != 0) {
+                System.out.println("Generated MoviesgenTable key = " + key);
+            } else {
+                System.out.println("MoviegenTable key not generated = " + key);
             }
 
         } catch (SQLException ex) {
 
             Logger.getLogger(great.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return key;
 
     }
 
@@ -115,9 +148,9 @@ public class great {
                 key = rs.next() ? rs.getInt(1) : 0;
 
                 if (key != 0) {
-                    System.out.println("Generated key = " + key);
+                    System.out.println("Generated Movie key = " + key);
                 } else {
-                    System.out.println("key not generated = " + key);
+                    System.out.println("Movie key not generated = " + key);
                 }
                 return key;
 
@@ -159,9 +192,9 @@ public class great {
                     key = rsKeys.next() ? rsKeys.getInt(1) : 0;
 
                     if (key != 0) {
-                        System.out.println("Generated key = " + key);
+                        System.out.println("Generated Genre key = " + key);
                     } else {
-                        System.out.println("key not generated = " + key);
+                        System.out.println("Genre key not generated = " + key);
                     }
                     return key;
 
@@ -215,9 +248,9 @@ public class great {
                     key = rs.next() ? rs.getInt(1) : 0;
 
                     if (key != 0) {
-                        System.out.println("Generated key = " + key);
+                        System.out.println("Generated Moviesgenres key = " + key);
                     } else {
-                        System.out.println("key not generated = " + key);
+                        System.out.println("MoviesGenres key not generated = " + key);
                     }
                     return key;
 

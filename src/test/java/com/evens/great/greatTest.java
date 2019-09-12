@@ -1,3 +1,5 @@
+package com.evens.great;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,43 +14,32 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.testng.Assert;
 
 /**
  *
  * @author evans
  */
 public class greatTest {
+    private static Connection con = DB.mysql();
+    
     
     @BeforeClass
     public static void setUpClass() {
-        Connection con = DB.mysql();
+
     }
     
     @AfterClass
     public static void tearDownClass() {
-        
     }
     
     @Before
     public void setUp() {
-        DB.mysql();
+
     }
     
     @After
     public void tearDown() {
-        
-    }
-
-    /**
-     * Test of Url method, of class great.
-     */
-    @Test
-    public void testUrl() {
-        System.out.println("Url");
-        JSONArray expResult = null;
-        JSONArray result = great.Url();
-        assertTrue(expResult != result);
-
     }
 
     /**
@@ -57,7 +48,23 @@ public class greatTest {
     @Test
     public void testCreateTables() {
         System.out.println("createTables");
-        great.createTables();
+        Connection con = null;
+        assertFalse(con != null);
+
+
+    }
+
+    /**
+     * Test of Url method, of class great.
+     */
+  
+    
+    @Test
+    public void testUrl() {
+        System.out.println("Url");
+        JSONArray expResult = great.Url();
+        JSONArray result = great.Url();
+        assertTrue(expResult != result);
 
     }
 
@@ -67,20 +74,27 @@ public class greatTest {
     @Test
     public void testInsertMovies() {
         System.out.println("insertMovies");
-        great.insertMovies();
+//        Connection con = DB.mysql();
+
+        JSONArray jsonArray = great.Url();
+
+        assertNotNull(con);
+        assertNotNull(jsonArray);
+        assertEquals(great.insertMovies(con, jsonArray), 0);
 
     }
 
     /**
-     * Test of insertGenres method, of class great.
+     * Test oft insertGenres method, of class great.
      */
     @Test
     public void testInsertGenres() {
         System.out.println("insertGenres");
-        great.insertGenres();
-//        great genre = new great();
-//        assertTrue();
-        
+        JSONArray jsonArray = great.Url();
+        assertNotNull(con);
+        assertNotNull(jsonArray);        
+        assertEquals(great.insertGenres(con, jsonArray), 0);
+
 
     }
 
@@ -90,10 +104,15 @@ public class greatTest {
     @Test
     public void testInsertMoviesGenres() {
         System.out.println("insertMoviesGenres");
-        great.insertMoviesGenres();
+        JSONArray jay = great.Url();
+
+        assertNotNull(con);
+
+        assertNotNull(jay);
+
+        assertEquals(great.insertMoviesGenres(con, jay), 0);
+
 
     }
-
-
     
 }

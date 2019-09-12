@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: greatTest
+Test set: com.evens.great.greatTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 195.872 sec - in greatTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.282 sec - in com.evens.great.greatTest

@@ -13,6 +13,8 @@ javaMovies is a java application that:
 
 - mySQL
 
+- NetBeans 
+
 ## Prerequisites
 
 internet access to get the JSONArray.
@@ -20,11 +22,12 @@ internet access to get the JSONArray.
 ## Installation 
 
 - install mysql 
-- create database Moviedb.
+
+- create new empty database Moviedb.
 
 * set your connections in DB.mysql() as "connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/yourDBname", "USERNAME", "DBPASSWORD");"
 
--Run DB from file DB.java as main class.
+- Run DB from file DB.java as main class.
 
 
 
